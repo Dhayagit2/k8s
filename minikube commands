@@ -1,0 +1,19 @@
+    minikube start: Starts a new Minikube cluster.
+
+    minikube stop: Stops the currently running Minikube cluster.
+
+    minikube delete: Deletes the current Minikube cluster.
+
+    minikube status: Checks the status of the current Minikube cluster.
+
+    minikube dashboard: Opens the Kubernetes dashboard in a web browser.
+
+    minikube ssh: Opens an SSH session to the Minikube node.
+
+    minikube service <service-name>: Opens the specified service in a web browser.
+
+    minikube addons list: Lists all available Minikube addons.
+
+    minikube addons enable <addon-name>: Enables the specified Minikube addon.
+
+    minikube addons disable <addon-name>: Disables the specified Minikube addon.

@@ -1,0 +1,40 @@
+kubectl get: This command is used to retrieve information about resources in a Kubernetes cluster. For example:
+
+kubectl get pods: List all pods in the current namespace.
+kubectl get deployments: List all deployments in the current namespace.
+kubectl get services: List all services in the current namespace.
+kubectl describe: This command provides detailed information about a specific resource. For example:
+
+kubectl describe pod <pod_name>: Get detailed information about a specific pod.
+kubectl describe deployment <deployment_name>: Get detailed information about a specific deployment.
+kubectl describe service <service_name>: Get detailed information about a specific service.
+kubectl create: This command is used to create new resources in a Kubernetes cluster. For example:
+
+kubectl create deployment <deployment_name> --image=<container_image>: Create a new deployment.
+kubectl create pod <pod_name> --image=<container_image>: Create a new pod.
+kubectl create service <service_name> --tcp=<port>:<targetPort>: Create a new service.
+kubectl apply: This command is used to apply changes to existing resources or create new resources from a YAML file. For example:
+
+kubectl apply -f <yaml_file>: Apply changes to resources defined in a YAML file.
+kubectl delete: This command is used to delete resources in a Kubernetes cluster. For example:
+
+kubectl delete pod <pod_name>: Delete a specific pod.
+kubectl delete deployment <deployment_name>: Delete a specific deployment.
+kubectl delete service <service_name>: Delete a specific service.
+kubectl exec: This command is used to execute commands in a running container within a pod. For example:
+
+kubectl exec -it <pod_name> -- <command>: Execute a command in a running pod interactively.
+kubectl logs: This command is used to view the logs of a pod or container. For example:
+
+kubectl logs <pod_name>: View logs of a specific pod.
+kubectl logs <pod_name> -c <container_name>: View logs of a specific container within a pod.
+kubectl port-forward: This command is used to forward ports from a local machine to a pod or service in a Kubernetes cluster. For example:
+
+kubectl port-forward <pod_name> <local_port>:<remote_port>: Forward ports from a specific pod to the local machine.
+kubectl get events: This command is used to view events related to resources in a Kubernetes cluster. For example:
+
+kubectl get events: View events for all resources in the current namespace.
+kubectl get events -n <namespace>: View events for resources in a specific namespace.
+kubectl config: This command is used to manage the configuration settings for kubectl, such as managing contexts, clusters, and users.
+The kubectl get pod -o wide command is used to retrieve information about pods in a Kubernetes cluster, with additional details including the node name and IP address of the pod. The -o wide option specifies the output format as "wide", which includes additional columns for node name and IP address.
+kubectl logs <pod_name>  - to check logs of the pod

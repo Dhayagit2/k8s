@@ -1,0 +1,27 @@
+Kubernetes cluster has master node and slave nodes (worker node). master and worker nodes are together called as k8s cluster
+
+----------------------------xx----------------------------------------------
+                worker node
+each worker node has multiple pods in it 
+3 proceeses must be installed on every worker node
+There three processes are -- kubelet,container run time and kube proxy
+container run time--> it is nothing but a container. e.g: docker
+kubelet --->it is a communication service. it does the actual work.
+it intereacts with the container and node.
+it starts the pod with the container inside
+kube proxy --> it forwards the requests properly. Lets assume there are two replicasets.
+how the kubenerets know traffic should be routed to which replica or which pod?
+thats where kube proxy arrives and forwars requests properly
+------------------------------------x------------------------------------------
+                   Master node
+how do you interact witha cluster? how do you schedule pods?how do you monitor them? thats where the master node arrives and does these duties
+master process has 4 processes running in it
+api server --> it is the one client communicates with query or update or whatver communication do
+It is the gateway to the cluster and does the authentication
+if end user send the request it validates and processes the requests
+scheduler --> how to schedule pod or deploy a pod or route to the correct pod if pod 1 is full
+generally,it schedules the pod.   end user --> api server -->scheduler-->where to put the pod
+controller manager --> it detects the state changes. health,resource abailable,pod down etc.  controller manager-->scheduler-->kubelet
+etcd --> known as cluster brain.cluster changbes are stored in key value pair. It knows ebery informstion. e.g. health,resource availabe,cluster state change etc. note:application data are not stored in etc. only cluster data are stored
+
+in gerenal we will be having two master nodes and more than 3 worker nodes. 
